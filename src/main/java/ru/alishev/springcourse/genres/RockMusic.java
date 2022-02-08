@@ -1,6 +1,7 @@
-package ru.alishev.springcourse;
+package ru.alishev.springcourse.genres;
 
 import org.springframework.stereotype.Component;
+import ru.alishev.springcourse.Music;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,6 @@ import java.util.List;
  */
 //@Component
 public class RockMusic implements Music {
-    private List<String> songs = new ArrayList<>();
 
     @Override
     public String getSong() {
