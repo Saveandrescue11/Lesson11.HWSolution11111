@@ -1,10 +1,10 @@
 package ru.alishev.springcourse;
 
-import com.sun.tools.javac.code.Attribute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import java.util.Random;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,16 +44,18 @@ public class MusicPlayer {
 //        this.music1 = music1;
 //        this.music2 = music2;
 //    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public int getVolume() {
-//        return volume;
-//    }
-//
-//    public String playMusic() {
-//        return "playing: " + music1.getSong() + " " + music2.getSong();
-//    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public String playMusic() {
+        Random random = new Random();
+
+        return "playing: " + musicList.get(random.nextInt(musicList.size())).getSong() + " " + "vol: " + this.volume;
+    }
 }
